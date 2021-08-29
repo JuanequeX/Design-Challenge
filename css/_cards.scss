@@ -1,0 +1,71 @@
+.cards-container {
+  margin: 4.5rem 0 10rem;
+
+  @include desktop {
+   margin-bottom: 12rem;
+  }
+
+  &__image {
+    padding:1rem;
+
+    @include desktop {
+      width:25%;
+    }
+  }
+
+  &__card {
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px $bg-shadow;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 1rem;
+    padding:3rem 0;
+    text-align: center;
+
+    @include desktop {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+
+      &:nth-child(2) {
+        flex-direction: initial;
+      }
+    }
+  }
+
+  &__block {
+    @include desktop {
+      margin: 0 1.5rem;
+    }
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width:40%;
+    }
+  }
+
+  &__title {
+    color:$color-blue-dark;
+    font-family: $font-family-secondary;
+    padding-top: 2rem;
+
+    @include desktop {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__info {
+    color: $color-gray;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+}

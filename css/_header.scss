@@ -1,0 +1,52 @@
+.header-container {
+  background-color: transparent;
+  display: flex;
+  height: 5rem;
+  position: absolute;
+  width: 100%;
+
+  @include desktop {
+    height: 7rem;
+  }
+
+  &__nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include desktop {
+      margin: 0 1.5rem;
+    }
+  }
+
+  &__logo {
+    padding-left: 1rem;
+    width: 8rem;
+
+    @include desktop {
+      width: 9.5rem;
+    }
+  }
+
+  &__button {
+    background-color: $bg-white;
+    border-radius: 3rem;
+    border: none;
+    box-shadow: 0.5px 0.5px 5px $color-gray;
+    color: $color-blue-dark;
+    font-weight: $font-w-700;
+    height: 1.8rem;
+    margin-right: 1rem;
+    width: 7rem;
+
+    &:hover {
+     color: $color-hover-blue-dark;
+    }
+
+    @include desktop {
+      width: 11rem;
+      height: 2.8rem;
+    }
+  }
+}

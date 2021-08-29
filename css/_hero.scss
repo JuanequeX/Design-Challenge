@@ -1,0 +1,77 @@
+.hero-container {
+  background-color: $bg-blue;
+  background-image: url("../images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  color: $color-blue-dark;
+
+  @include desktop {
+    background-image: url("../images/bg-hero-desktop.svg");
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+
+    @include desktop {
+      margin: 0 1.5rem;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    @include desktop {
+     align-items: initial;
+     text-align: initial;
+     padding-right: 8rem;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    margin-top: 4.5rem;
+
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    font-weight: $font-w-400;
+    margin-top: 1.5rem;
+  }
+
+  &__button {
+    background-color: $bg-pink;
+    border-radius: 3rem;
+    border:none;
+    color: $bg-white;
+    box-shadow: 1px 1px 5px $bg-shadow;
+    font-weight: $font-w-700;
+    height: 3rem;
+    margin-top: 1.5rem;
+    width: 15rem;
+
+    &:hover{
+      background-color: $color-hover-pink;
+    }
+  }
+
+  &__img {
+    margin-top: 2.5rem;
+    width: 90%;
+
+    @include desktop {
+      margin-top: 5rem;
+      width: 50%;
+    }
+  }
+}
